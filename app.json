@@ -1,38 +1,38 @@
 {
-  "name": "XolPanel - Web VPN Panel",
-  "description": "XolPanel - Free Web VPN Panel With WSGI Flask WebServer",
+  "name": "XolPanel - Panel VPN Web",
+  "description": "XolPanel - Panel VPN Web Gratis dengan WSGI Flask WebServer",
   "stack": "container",
   "env": {
     "ADMIN_USERNAME": {
-      "description": "Admin Username (untuk mengelola atau menghapus member di Panel)",
+      "description": "Username Admin (untuk mengelola atau menghapus member di Panel)",
       "required": true
     },
     "ADMIN_PASSWORD": {
-      "description": "Admin Password",
+      "description": "Password Admin",
       "required": true
     },
-     "AUTH_KEY": {
-      "description": "AUTH Key untuk API VPS",
+    "AUTH_KEY": {
+      "description": "Kunci AUTH untuk API VPS",
       "required": true
     },
     "DARK_MODE": {
-      "description": "isi 'yes' kalau mau ganti tema ke Dark Mode, ketik 'no' kalau mau ganti ke tema Light / White ",
+      "description": "Isi 'yes' untuk mengaktifkan Mode Gelap, ketik 'no' untuk menggunakan Tema Terang/Putih",
       "required": true
     },
     "SERVER": {
-      "description": "format: 'NAMA,HOST,HARGA;NAMA2,HOST2,HARGA2' contoh: 'SG,sg.xolva.id,10000;HK,hk.xolva.id,5000' Gunakan ; untuk memisahkan server/vps",
+      "description": "Format: 'NAMA,HOST,HARGA;NAMA2,HOST2,HARGA2'. Contoh: 'SG,sg.xolva.id,10000;HK,hk.xolva.id,5000'. Gunakan ';' untuk memisahkan server/VPS.",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "description": "Nama App Heroku, Nama App pertama yang dimasukkan (lihat bagian paling atas)",
       "required": true
     }
   },
   "addons": [
     {
-    "plan": "heroku-postgresql",
+      "plan": "heroku-postgresql",
       "options": {
-        "version": "12"
+        "version": "14"
       }
     }
   ],
